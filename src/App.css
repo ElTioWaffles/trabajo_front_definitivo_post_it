@@ -1,0 +1,135 @@
+body {
+  background-color: #1c1c1c;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #e0e0e0; 
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.note-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  width: 100%;
+}
+
+form input[type="text"], form textarea {
+  height: 40px; /* Ajusta la altura aquí */
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  background-color: #3c3c3c;
+  color: #e0e0e0;
+  box-sizing: border-box;
+}
+
+form input[type="text"] {
+  flex: 1; /* Ajusta este valor según el tamaño deseado */
+}
+
+form textarea {
+  flex: 2; /* Ajusta este valor según el tamaño deseado */
+  resize: none;
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: #a0a0a0;
+}
+
+form label {
+  color: #e0e0e0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+form input[type="checkbox"] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+form button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+form button:hover {
+  background: #d32f2f;
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .notes {
+    flex-direction: column;
+  }
+}
+
+.note {
+  background: #fffae3;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  color: #333;
+  word-wrap: break-word; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note.important {
+  background: #ff6f61;
+}
+
+.note h3 {
+  margin-top: 0;
+}
+
+.note p {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.note button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.note button:hover {
+  background: #d32f2f;
+}
